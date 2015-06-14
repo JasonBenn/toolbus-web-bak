@@ -7,7 +7,9 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('tools', function() {
-    this.route('show', { path: '/:tool_id' })
+    this.route('show', { path: '/:tool_id' }, function() {
+      this.route('missions');
+    });
   });
 });
 
